@@ -1,0 +1,333 @@
+Constructor
+
+-Class name & method name must be same
+-it does not contain return datatype
+-it doenot return a value
+-When object is created then it is automatically called or invoked
+-No need of (.) operator for calling a constuctor
+
+-there are 2 types of constructor
+1)Non-parameterized/default constructor
+2)parameterized
+
+
+1)Non-parameterized/default constructor
+file save with  Emp_Demo.java(it contains main() method)
+
+import java.util.Scanner;
+
+class Employee 
+{
+	
+	int eid;
+	String name;
+	double salary;
+	 Employee()//non-parameterized constructor/default
+	{
+		eid=101;
+		name="Sam";
+		salary=9876.90;
+		/*Scanner sc=new Scanner (System.in);
+		System.out.println("Enter id ,name & salary");
+		eid=sc.nextInt();
+		name=sc.next();
+		salary=sc.nextDouble();*/
+	}
+	void display()
+	{
+		System.out.println("Emp id="+eid);
+		System.out.println("Name="+name);
+		System.out.println("Salary="+salary);
+		
+	}	
+}
+public class Emp_Demo {
+
+	public static void main(String[] args) 
+	{
+		Employee e1=new Employee();	     
+		
+		e1.display();
+		Employee e2=new Employee();
+	           	e2.display();
+
+	}
+
+}
+
+2)Book(bid,baname,author,price)
+3)Vehicle(vid,vaname,color,price)
+
+2)Parameterized constructor
+import java.util.Scanner;
+class Employee 
+{
+	int eid;
+	String name;
+	double salary;
+	
+	Employee(int eid,String name,double salary)//parameterized constuctor
+	{
+		this.eid=eid;
+		this.name=name;
+		this.salary=salary;
+	}	
+	void show()
+	{
+		System.out.println("Emp id="+eid);
+		System.out.println("Name="+name);
+		System.out.println("Salary="+salary);
+		
+	}	
+}
+public class Emp_Demo {
+
+	public static void main(String[] args) 
+	{
+		int eid;
+		String name;
+		double salary;
+      	
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter id ,name & salary");
+		eid=sc.nextInt();
+		name=sc.next();
+		salary=sc.nextDouble();
+		Employee e2=new Employee(eid,name,salary);
+		e2.show();
+		
+	}
+
+}
+
+4)Student(id,name,address,per)
+5)Area of circle
+import java.util.Scanner;
+public class AreaDemo 
+{
+	double r,A;
+	AreaDemo(double r)
+	{
+		this.r=r;
+	}
+	double cal_area()
+	{
+		A=3.14*r*r;
+		return(A);
+	}
+                    public static void main(String[] args) 
+	{
+		double r,A;
+		Scanner sc =new Scanner (System.in);
+		
+		System.out.println("Enter value of r");
+		r=sc.nextDouble();
+		Area_Demo a1=new Area_Demo(r);
+		A=a1.cal_area();
+		System.out.println("Area="+A);
+	}
+
+}
+
+5)max from 2 number
+6)factorial
+7)
+import java.util.Scanner;
+public class ParaMethodDemo 
+{	
+	int flag=0,n1,n,x,sum=0,p,f1=1,i;
+	ParaMethodDemo (int n)
+	{
+		this.n=n;
+	}
+	void pattern()
+	{
+	for(int i=1;i<=n;i++)
+	{
+		for(int j=1;j<=i;j++)
+		{
+			SOprint(""+j);
+		}
+		SOPrintln();
+	}
+	}
+	void prime()
+	{
+		
+		for(i=2;i<=(n/2);i++)
+		{
+		if(n%i==0)
+		{
+		flag=1;
+		break;
+		}
+		}
+		
+		if(flag==0)
+			System.out.println("No is prime");
+		else
+			System.out.println("No is not prime");
+	}
+String pal()
+	{
+		p=n;
+		while(p>0)
+		{
+		n1=p%10;
+		p=p/10;
+		sum=(sum*10)+n1;
+		}
+		
+		if(sum==n)
+			return "No is pal";
+		else
+			return "No is not pal";
+	}
+	
+int power(int x)
+{
+                  this.x=x;//this operator means acces the member of itself
+	for(i=1;i<=n;i++)
+	{
+	f1=f1*x;
+	}
+	return (f1);
+	
+}
+	public static void main(String[] args) 
+	{
+	                  int n,x;
+		Scanner sc =new Scanner (System.in);
+		System.out.println("Enter value of n");
+		n=sc.nextInt();
+		ParaMethodDemo a1=new ParaMethodDemo(n);
+		
+		
+		a1.pattern();
+		
+		a1.prime();		
+		System.out.println(""+a1.pal());		
+		System.out.println("Enter value of x");
+		x=sc.nextInt();	
+		int f1=a1.power(x);	
+		System.out.println("Power"+f1);
+
+	}
+
+}
+
+8)Any 4 favourite functions add in class use any three types of userdefine function
+9)Any 4 favourite functions add in class use any three types of userdefine function
+
+
+Array of object using constructor
+
+import java.util.Scanner;
+class Employee 
+{
+	int eid;
+	String name;
+	double salary;
+	Employee()//defualt constructor
+	{
+		eid=101;
+		name="Sam";
+		salary=9876.90;		
+	}
+	Employee(int eid,String name,double salary)//parameterized constuctor
+	{
+		this.eid=eid;
+		this.name=name;
+		this.salary=salary;
+	}	
+	void display()
+	{
+		/*System.out.println("Emp id="+eid);
+		System.out.println("Name="+name);
+		System.out.println("Salary="+salary);*/
+System.out.println(eid+"\t"+name+"\t"+salary);
+		
+	}	
+
+}
+public class Emp_Demo {
+
+	public static void main(String[] args) 
+	{
+		int eid,i;
+		String name;
+		double salary;
+	 Employee e=new Employee();
+		e.display();
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter no of records");
+		int n=sc.nextInt();
+
+      	 Employee e1[ ]=new Employee[n];//array creation
+      	for(i=0;i<n;i++)
+      	{	
+		System.out.println("Enter id ,name & salary");
+		eid=sc.nextInt();
+		name=sc.next();
+		salary=sc.nextDouble();
+		e1[i]=new Employee(eid,name,salary);//object creation
+
+
+		
+      	}
+	System.out.println("Eid\tEname\tSalary");	
+	System.out.println("____________________________\n");
+      	for(i=0;i<n;i++)
+      	{
+      		e1[i].display();
+      	}
+      	
+	}
+
+}
+2)Book(bid,baname,author,price)
+3)Vehicle(vid,vaname,color,price)
+4)Student(id,name,address,per)
+5)Area of circle
+import java.util.Scanner;
+public class Area_Demo 
+{
+	double r,A;
+	Area_Demo()
+	{
+		r=0.0;
+	}
+	Area_Demo(double r)
+	{
+		this.r=r;
+	}
+	double cal_area()
+	{
+		A=3.14*r*r;
+		return(A);
+	}
+                    public static void main(String[] args) 
+	{
+		double r1,A;
+		int n;
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter no of records");
+		int n=sc.nextInt();
+
+      	Area_Demo  a1[ ]=new Area_Demo [n];//array creation
+      	for(i=0;i<n;i++)
+      	{	
+		System.out.println("Enter value of r");
+		r1=sc.nextDouble();
+		 a1[i]=new Area_Demo(r1);
+		A=a1[i].cal_area();
+		System.out.println("Area="+A);
+	}
+	}
+
+}
+6)Max(int a,int b)
+7)Factorial(int n)
+8)Palinfrom(int n)
+
+
